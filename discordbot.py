@@ -13,7 +13,7 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
     
 @bot.command()
-async def message(ctx):
-    await ctx.send('pong')
+async def test(ctx):
+    await ctx.send('ああああ')
 
 bot.run(token)
