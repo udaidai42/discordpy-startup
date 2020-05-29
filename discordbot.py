@@ -2,7 +2,7 @@ from discord.ext import commands
 import os
 import traceback
 
-bot = commands.Bot(command_prefix='/')
+bot = commands.Bot(command_prefix='!')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
@@ -13,8 +13,8 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
     
 @bot.command()
-async def test(ctx):
+async def oumu(ctx,arg):
     # coding: utf-8
-    await ctx.send('ああああ')
+    await ctx.send(arg)
 
 bot.run(token)
