@@ -14,6 +14,7 @@ async def on_command_error(ctx, error):
     
 @bot.command()
 async def test(ctx):
+    # coding: utf-8
     await ctx.send('ああああ')
 
 bot.run(token)
