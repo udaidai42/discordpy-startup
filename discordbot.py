@@ -12,16 +12,8 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
     
-async def on_message(message):
-    # メッセージ送信者がBotだった場合は無視する
-    if message.author.bot:
-        return
-    
-    if message.content == 'a':
-        await message.channel.send('a')
-
 @bot.command()
-async def ping(ctx):
+async def message(ctx):
     await ctx.send('pong')
 
 bot.run(token)
