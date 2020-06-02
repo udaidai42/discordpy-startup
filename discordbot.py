@@ -7,7 +7,7 @@ bot = commands.Bot(command_prefix='k.')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
-@bot.event
+@bot.command
 async def test(message):
     await message.channel.send('うい')
 
