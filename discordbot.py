@@ -1,7 +1,4 @@
 from discord.ext import commands
-from PIL import Image
-width = 500
-height = 500
 import os
 import traceback
 
