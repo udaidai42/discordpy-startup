@@ -3,8 +3,9 @@ from discord.ext import commands
 import os
 import traceback
 
-bot = commands.Bot(command_prefix='k.')
+bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
+
 
 @bot.event
 async def on_message(message):
@@ -17,8 +18,8 @@ async def on_message(message):
 
 
 @bot.commands
-async def test(ctx):
-    await ctx.send('おまんこ')
+async def ping(ctx):
+    await ctx.send('pong')
 
 
 bot.run(token)
