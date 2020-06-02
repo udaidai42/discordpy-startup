@@ -9,6 +9,6 @@ token = os.environ['DISCORD_BOT_TOKEN']
 
 @bot.command
 async def test(message):
-    await message.channel.send('うい')
+    await message.send('p')
 
 bot.run(token)
