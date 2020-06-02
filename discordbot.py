@@ -1,4 +1,7 @@
 from discord.ext import commands
+from PIL import Image
+width = 500
+height = 500
 import os
 import traceback
 
@@ -7,14 +10,10 @@ token = os.environ['DISCORD_BOT_TOKEN']
 
 
 @bot.event
-async def on_command_error(ctx, error):
-    orig_error = getattr(error, "original", error)
-    error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
-    await ctx.send(error_msg)
-    
-@bot.command()
-async def oumu(ctx,arg):
-    # coding: utf-8
-    await ctx.send(arg)
+async def on_message(message):
+    if message.author.bot:
+        return
+    if message.content == 'k.test':
+        await message.channel.send('うい')
 
 bot.run(token)
