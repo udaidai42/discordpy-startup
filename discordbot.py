@@ -10,10 +10,9 @@ token = os.environ['DISCORD_BOT_TOKEN']
 
 
 @bot.event
-async def on_message(message):
+async def test(message):
     if message.author.bot:
         return
-    if message.content == 'k.test':
-        await message.channel.send('うい')
+    await message.channel.send('うい')
 
 bot.run(token)
